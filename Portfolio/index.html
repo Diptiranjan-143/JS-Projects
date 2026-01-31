@@ -1,0 +1,656 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diptiranjan Guin - Java Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body class="bg-slate-50">
+    <div class="animated-bg">
+        <span style="width: 80px; height: 80px; left: 20%; animation-delay: 0s; animation-duration: 18s;"></span>
+        <span style="width: 100px; height: 100px; left: 40%; animation-delay: 2s; animation-duration: 15s;"></span>
+        <span style="width: 50px; height: 50px; left: 65%; animation-delay: 4s; animation-duration: 12s;"></span>
+        <span style="width: 150px; height: 150px; left: 75%; animation-delay: 6s; animation-duration: 20s;"></span>
+        <span style="width: 110px; height: 110px; left: 10%; animation-delay: 8s; animation-duration: 14s;"></span>
+        <span style="width: 90px; height: 90px; left: 50%; animation-delay: 10s; animation-duration: 16s;"></span>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-blue-600">DG<span class="text-blue-900">.</span></h1>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-800 hover:text-blue-600 transition">Home</a>
+                <a href="#about" class="nav-link text-gray-800 hover:text-blue-600 transition">About</a>
+                <a href="#education" class="nav-link text-gray-800 hover:text-blue-600 transition">Education</a>
+                <a href="#skills" class="nav-link text-gray-800 hover:text-blue-600 transition">Skills</a>
+                <a href="#projects" class="nav-link text-gray-800 hover:text-blue-600 transition">Projects</a>
+                <a href="#contact" class="nav-link text-gray-800 hover:text-blue-600 transition">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <button id="themeToggle" class="theme-toggle p-2 rounded-full hover:bg-gray-100 transition">
+                    <i class="fas fa-moon text-gray-800"></i>
+                </button>
+                
+                <button id="mobileMenuBtn" class="md:hidden text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white shadow-lg absolute w-full">
+            <div class="flex flex-col p-4 space-y-4">
+                <a href="#home" class="text-gray-800 hover:text-blue-600 transition py-2">Home</a>
+                <a href="#about" class="text-gray-800 hover:text-blue-600 transition py-2">About</a>
+                <a href="#education" class="text-gray-800 hover:text-blue-600 transition py-2">Education</a>
+                <a href="#skills" class="text-gray-800 hover:text-blue-600 transition py-2">Skills</a>
+                <a href="#projects" class="text-gray-800 hover:text-blue-600 transition py-2">Projects</a>
+                <a href="#contact" class="text-gray-800 hover:text-blue-600 transition py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800">
+                    Hi, I'm <span class="text-blue-600">Diptiranjan Guin</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-medium mb-6 text-gray-600">
+                    Java Full Stack Developer
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                    A passionate developer focused on creating efficient and user-friendly applications.
+                    Currently pursuing B.Tech in Computer Science.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Contact Me
+                    </a>
+                    <a href="#projects" class="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition">
+                        View Projects
+                    </a>
+                </div>
+                <div class="flex mt-8 space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-xl">
+                        <svg class="w-full h-full text-blue-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <rect fill="currentColor" width="24" height="24" />
+                            <path fill="#3b82f6" d="M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9S16.97,3,12,3z M12,7c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,7,12,7z M12,18.5c-2.33,0-4.31-1.46-5.11-3.5h10.22C16.31,17.04,14.33,18.5,12,18.5z" />
+                        </svg>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-full shadow-lg">
+                        <i class="fas fa-code text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-gray-400 hover:text-blue-600 transition">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="relative">
+                        <div class="w-full max-w-md mx-auto bg-blue-50 p-8 rounded-lg shadow-lg">
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                I'm Diptiranjan Guin from Nuapatana, Tigiria in Cuttack district. I'm currently pursuing my B.Tech in Computer Science at Einstein Academy of Technology & Management in Khordha, BBSR.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                I'm passionate about Java Full Stack development and currently enhancing my skills through an internship. I enjoy building robust applications and have developed several projects using Core Java and web technologies.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                When I'm not coding, I enjoy playing online games like BGMI and Candy Crush. I consider myself a quick learner and am always interested in exploring new technologies.
+                            </p>
+                            <div class="absolute -top-4 -left-4 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white">
+                                <i class="fas fa-user text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="card bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                            <div class="text-blue-600 mb-4">
+                                <i class="fas fa-graduation-cap text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Education</h3>
+                            <p class="text-gray-600">B.Tech in Computer Science (Final Year)</p>
+                        </div>
+                        
+                        <div class="card bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                            <div class="text-blue-600 mb-4">
+                                <i class="fas fa-laptop-code text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Experience</h3>
+                            <p class="text-gray-600">Java Full Stack Development Internship</p>
+                        </div>
+                        
+                        <div class="card bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                            <div class="text-blue-600 mb-4">
+                                <i class="fas fa-code text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Development</h3>
+                            <p class="text-gray-600">Frontend & Backend Development</p>
+                        </div>
+                        
+                        <div class="card bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                            <div class="text-blue-600 mb-4">
+                                <i class="fas fa-gamepad text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Hobbies</h3>
+                            <p class="text-gray-600">Gaming (BGMI, Candy Crush)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Education</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="timeline-item mb-12 pb-8">
+                    <div class="card bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">B.Tech in Computer Science</h3>
+                            <span class="text-blue-600 font-medium">2020 - Present</span>
+                        </div>
+                        <h4 class="text-lg text-gray-700 mb-2">Einstein Academy of Technology & Management</h4>
+                        <p class="text-gray-600 mb-4">Khordha, Bhubaneswar</p>
+                        <p class="text-gray-600">Currently in final year, focusing on Java Full Stack Development with an internship.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item mb-12 pb-8">
+                    <div class="card bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Higher Secondary Education (+2)</h3>
+                            <span class="text-blue-600 font-medium">2018 - 2020</span>
+                        </div>
+                        <h4 class="text-lg text-gray-700 mb-2">C.S Higher Secondary School</h4>
+                        <p class="text-gray-600 mb-4">Nuapatana</p>
+                        <p class="text-gray-600">Completed with 69% marks</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="card bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">Secondary Education (10th)</h3>
+                            <span class="text-blue-600 font-medium">2017 - 2018</span>
+                        </div>
+                        <h4 class="text-lg text-gray-700 mb-2">A.S High School</h4>
+                        <p class="text-gray-600 mb-4">Nuapatana</p>
+                        <p class="text-gray-600">Completed with 69% marks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Skills</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Technical Skills</h3>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">Java</span>
+                                <span class="text-blue-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">HTML & CSS</span>
+                                <span class="text-blue-600">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">JavaScript</span>
+                                <span class="text-blue-600">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">SQL</span>
+                                <span class="text-blue-600">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 font-medium">C</span>
+                                <span class="text-blue-600">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Tools & Platforms</h3>
+                        
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">
+                                <i class="fas fa-code mr-2"></i>Java
+                            </span>
+                            <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">
+                                <i class="fab fa-html5 mr-2"></i>HTML
+                            </span>
+                            <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">
+                                <i class="fab fa-css3-alt mr-2"></i>CSS
+                            </span>
+                            <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">
+                                <i class="fab fa-js mr-2"></i>JavaScript
+                            </span>
+                            <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">
+                                <i class="fas fa-database mr-2"></i>SQL
+                            </span>
+                            <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">
+                                <i class="fas fa-code mr-2"></i>C
+                            </span>
+                            <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">
+                                <i class="fab fa-figma mr-2"></i>Figma
+                            </span>
+                            <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">
+                                <i class="fas fa-palette mr-2"></i>Canva
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-semibold text-gray-800 mt-10 mb-6">Soft Skills</h3>
+                        
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-pill px-4 py-2 bg-green-100 text-green-800 rounded-full font-medium">
+                                <i class="fas fa-bolt mr-2"></i>Quick Learner
+                            </span>
+                            <span class="skill-pill px-4 py-2 bg-green-100 text-green-800 rounded-full font-medium">
+                                <i class="fas fa-users mr-2"></i>Team Work
+                            </span>
+                            <span class="skill-pill px-4 py-2 bg-green-100 text-green-800 rounded-full font-medium">
+                                <i class="fas fa-lightbulb mr-2"></i>Problem Solving
+                            </span>
+                            <span class="skill-pill px-4 py-2 bg-green-100 text-green-800 rounded-full font-medium">
+                                <i class="fas fa-comments mr-2"></i>Communication
+                            </span>
+                            <span class="skill-pill px-4 py-2 bg-green-100 text-green-800 rounded-full font-medium">
+                                <i class="fas fa-tasks mr-2"></i>Time Management
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Projects</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="mb-12">
+                <div class="flex justify-center mb-8">
+                    <div class="inline-flex rounded-md shadow-sm" role="group">
+                        <button type="button" class="project-filter px-5 py-2 text-sm font-medium bg-blue-600 text-white rounded-l-lg" data-filter="all">
+                            All Projects
+                        </button>
+                        <button type="button" class="project-filter px-5 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-100" data-filter="java">
+                            Java
+                        </button>
+                        <button type="button" class="project-filter px-5 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-100 rounded-r-lg" data-filter="web">
+                            Web
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Java Projects -->
+                    <div class="project-card card bg-white rounded-lg shadow-md overflow-hidden" data-category="java">
+                        <div class="h-48 bg-blue-100 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">ATM Management System</h3>
+                            <p class="text-gray-600 mb-4">A Java-based ATM system with features like balance inquiry, withdrawal, deposit, and fund transfer.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Java</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">OOP</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Console App</span>
+                            </div>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card card bg-white rounded-lg shadow-md overflow-hidden" data-category="java">
+                        <div class="h-48 bg-blue-100 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Hospital Management System</h3>
+                            <p class="text-gray-600 mb-4">A comprehensive system for managing patient records, appointments, and hospital resources.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Java</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">SQL</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">JDBC</span>
+                            </div>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card card bg-white rounded-lg shadow-md overflow-hidden" data-category="java">
+                        <div class="h-48 bg-blue-100 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Airline Management System</h3>
+                            <p class="text-gray-600 mb-4">A system for managing flight bookings, schedules, and passenger information.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">Java</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">SQL</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">GUI</span>
+                            </div>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Details <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Web Projects -->
+                    <div class="project-card card bg-white rounded-lg shadow-md overflow-hidden" data-category="web">
+                        <div class="h-48 bg-indigo-100 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-indigo-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Personal Portfolio</h3>
+                            <p class="text-gray-600 mb-4">A responsive portfolio website showcasing my skills, projects, and experience.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded">HTML</span>
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded">CSS</span>
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded">JavaScript</span>
+                            </div>
+                            <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                                View Live <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card card bg-white rounded-lg shadow-md overflow-hidden" data-category="web">
+                        <div class="h-48 bg-indigo-100 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-indigo-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Travel Website</h3>
+                            <p class="text-gray-600 mb-4">A responsive travel website with destination guides, booking features, and user reviews.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded">HTML</span>
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded">CSS</span>
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded">JavaScript</span>
+                            </div>
+                            <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                                View Live <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card card bg-white rounded-lg shadow-md overflow-hidden" data-category="web">
+                        <div class="h-48 bg-indigo-100 flex items-center justify-center">
+                            <svg class="w-24 h-24 text-indigo-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18V5l12-2v13"></path>
+                                <circle cx="6" cy="18" r="3"></circle>
+                                <circle cx="18" cy="16" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Music Website</h3>
+                            <p class="text-gray-600 mb-4">An interactive music website with playlist creation, music player, and artist profiles.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded">HTML</span>
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded">CSS</span>
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded">JavaScript</span>
+                            </div>
+                            <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                                View Live <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-10 max-w-5xl mx-auto">
+                <div class="md:w-1/2">
+                    <div class="bg-blue-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-800 mb-1">Location</h4>
+                                <p class="text-gray-600">Nuapatana, Tigiria, Cuttack, Odisha</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-800 mb-1">Email</h4>
+                                <p class="text-gray-600">diptiranjan@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-800 mb-1">Phone</h4>
+                                <p class="text-gray-600">+91 9876543210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-800 mb-1">Social Media</h4>
+                                <div class="flex space-x-4 mt-2">
+                                    <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+                                        <i class="fab fa-linkedin text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+                                        <i class="fab fa-github text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+                                        <i class="fab fa-twitter text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+                                        <i class="fab fa-instagram text-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-white p-8 rounded-lg shadow-md border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Send Me a Message</h3>
+                        
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="John Doe">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Project Inquiry">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your message here..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg py-10 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold">Diptiranjan Guin</h2>
+                    <p class="text-blue-100">Java Full Stack Developer</p>
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-white hover:text-blue-200 transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-blue-200 transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-blue-200 transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-blue-200 transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+                
+                <div>
+                    <a href="#home" class="bg-white text-blue-600 px-6 py-2 rounded-full hover:bg-blue-50 transition">
+                        <i class="fas fa-arrow-up mr-2"></i> Back to Top
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-400 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Diptiranjan Guin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+   
